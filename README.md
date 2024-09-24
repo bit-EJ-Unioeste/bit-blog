@@ -3,9 +3,8 @@
 ### 1. Clone the repo
 
 ```bash
-git clone https://github.com/surjithctly/astroship.git myProjectName
-# or
-git clone https://github.com/surjithctly/astroship.git .
+git clone https://github.com/BIT-EJ/bit-website.git 
+
 ```
 
 The `.` will clone it to the current directory so make sure you are inside your project folder first.
