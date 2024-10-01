@@ -11,7 +11,7 @@ alt: "processo seletivo"
 }
 publishDate: "2024-10-01 08:00"
 category: "Anuncios"
-author: "Michel Caesar"
+author: "BIT - Empresa Júnior de Ciência da Computação"
 tags: [edital, processo-seletivo]
 ---
 
