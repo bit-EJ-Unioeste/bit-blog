@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "Está aberto o Processo Seletivo da BIT para o ano letivo 2024!"
 snippet: "Abriram-se as oportunidades para ingressar na BIT. Confira já o edital e veja as datas mais importantes!"
 image: {
@@ -9,9 +9,9 @@ src: "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAAA8FBM
 alt: "processo seletivo"
 
 }
-publishDate: "2024-09-29 17:00"
+publishDate: "2024-10-01 08:00"
 category: "Anuncios"
-author: "Michel Caesar"
+author: "BIT - Empresa Júnior de Ciência da Computação"
 tags: [edital, processo-seletivo]
 ---
 

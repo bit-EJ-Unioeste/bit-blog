@@ -1,0 +1,103 @@
+---
+draft: false
+title: "Introdução ao Git"
+snippet: "Uma introdução ao funcionamento e à utilização da ferramenta Git"
+publishDate: "2024-10-01 08:00"
+image: {
+  src: "https://mlohrktvfr9b.i.optimole.com/cb:fnc3.16591/w:auto/h:auto/q:90/f:best/https://www.nerdstickers.com.br/wp-content/uploads/2022/10/products-147-GIT-ICON-1.png",
+  alt: "Git"
+}
+category: "Tutoriais"
+author: "João Vitor Biederman"
+tags: [tutorial, git]
+---
+
+## <a name="What_is_git"></a>O que é Git?
+![In case of fire: 1. git commit; 2. git push; 3. leave building](https://raw.githubusercontent.com/hendrixroa/in-case-of-fire-1/master/in_case_of_fire.png)
+
+O Git é uma ferramenta para o versionamento de código criado por Linus Torvalds, o criado do Linux, focando em criar um ambiente que facilitasse a construção de software e a organização de várias versões para um projeto. Criado para ser uma ferramenta segura e de grande utilidade, ele é um grande facilitador na construção e manutenção de projetos de todas as ordens de magnitude. 
+
+Por ser um VCS (Version Control System ou Sistema de Controle de Versões) destruído ele permite com que o projeto esteja rodando em diversas instâncias ao mesmo tempo, não tendo uma única versão salva um servidor, mas sim contendo diversos clones do projeto distribuídos pelo computador dos colaboradores. 
+
+Dentro de um projeto no Git cada versão do projeto terá um identificador próprio, a cada versão criado um novo identificador é criado, permitindo com que as versões anteriores ainda estejam disponíveis. Isto é possível porque cada colaborador trabalha com uma espécie de clone do projeto original, e ao salvar uma mudança no projeto estamos apensas alterando este clone, não afetando nenhuma outra versão disponível até então. Cada versão do código é devidamente documentada, indicando quais arquivos foram modificados, onde foram feitas as mudanças e quem as realizou. 
+
+## Como trabalhamos com o git?
+
+Como anteriormente citado, no Git estamos sempre trabalhando com uma cópia do projeto, e nela podemos realizar adições de código, remoções e outras alterações que irão afetar o projeto apensas localmente, ou seja, para que estas alterações sejam aplicadas no projeto devemos realizar requisições para que a versão antiga seja substituída pela atual. No Git isso acontece através das comunicações que realizamos entre os fluxos de trabalho existentes.
+
+### Fluxos de trabalho
+
+O Git mantém quatro elementos no fluxo de trabalho, sendo este o diretório de trabalho, a área de preparação (staging area), o repositório local e o repositório remoto. 
+
+O diretório de trabalho nada mais é do que o diretório do seu computador no qual os arquivos do projeto estão, enquanto estão ali eles não são nada além de arquivos salvos no seu computador, porém podemos realizar uma operação para enviá-los para a área de preparação, nesta área adicionamos todos os arquivos que foram alterados por qualquer atividade durante o período em que trabalhávamos. 
+
+Da área de preparação podemos movimentar estes arquivos para o repositório local, aí os arquivos ainda não estarão disponíveis para outros usuários acessarem, pois seu identificador ainda não foi enviado para o repositório remoto, repositório em que todos os colaboradores têm acesso. 
+
+### Como movimentar arquivos entre os fluxos?
+
+No Git temos algumas séries de comandos que indicam qual ação o git deve realizar e indica em qual fluxo o arquivo deve ser enviado, alguns dos comandos mais comuns são: 
+
+1. `git add` Move os arquivos alterados do diretório de trabalho para a área de preparação, é possível movimentar arquivos únicos especificando quais arquivos devem ser movidos ou podemos mover todos os arquivos de uma vez; 
+
+2. `git commit` Movimentamos todos os arquivos da área de preparação diretamente para o repositório local; 
+
+3. `git push` Aqui todos os _commits_ realizados são enviamos para o repositório remoto; 
+
+4. `git fetch` Esta é uma operação para atualizar o repositório local, trazendo as modificações existentes no repositório remoto para ele; 
+
+5. `git merge` Uma operação utilizada para trazer modificações vindas do repositório local diretamente para o diretório de trabalho, esta operação permite que "misturemos" diferentes ramos do projeto (já já explicaremos isto); 
+
+6. `git pull` Desta vez puxamos diretamente de um repositório, global ou local, para a área de trabalho, aqui não temos a intenção de misturar os ramos, somente de atualizar a área. 
+
+## Ramos
+
+Outro recurso disponível no Git é a criação de ramificações no projeto, também chamados de _branchs_ (galhos). Ramificações permitem com que várias versões do projeto sejam salvas no repositório ao mesmo tempo, tanto local quanto remotamente, permitindo com que isolemos diferentes partes do desenvolvimento, permitindo com que testemos coisas sem que o ramo principal do código seja afetado. Para juntarmos diferentes ramos utilizando o comando `merge`, assim podemos trazer as alterações realizadas no ramo secundário para o ramo principal. Em um projeto é obrigatório a existências de um ramo principal, este geralmente é denominado _main_ ou _master_, estes sendo os nomes "padrões". 
+
+Um ramo criado a partir de outro está ligado ao mesmo, podendo ser integrado a ele ou ele integrado a si, porém as informações entre estes ramos podem ser conflitantes em alguns arquivos, requerêndo com que ajustes ou _rollbacks_ (a volta de versões) seja realizada em um dos lados. Estás divergências podem também ser resolvidos em um editor, escolhendo a fonte a ser salva para cada trecho que está em conflito.  
+
+Além disso, ramos não relacionados, ou seja, que não possuam parentes em comum ou cujo estes sejam distantes não podem ser misturados, sendo necessário forçar está operação. Esta medida, porém, deve ser realizada com bastante cuidado, uma vez que está sujeita a possíveis perca de dados. 
+
+Para criação de um novo ramo podemos utilizar o comando `git branch -b <name>`, que irá criar um ramo com o nome selecionado, já para trocarmos de ramificações utilizando `git checkout <branch>`, onde _branch_ é o ramo que iremos acessar. 
+
+# Aprendendo com git
+
+Vamos para um passo a passo para criação de um projeto, o mesmo pode ser feito de duas maneiras, via interface de alguma plataforma, por exemplo o GitHub, ou via linha de comando. Em ambos os casos alguma plataforma deve ser escolhida, ela será onde guardamos nosso repositório remoto, além de ser quem irá salvar todas as versões do nosso projeto. Além disso será interessante ter o Git instalado em sua máquina local, apesar de muitas plataformas disponibilizarem editores incluídos muitas vezes é mais cômodo trabalhar em um editor no qual estamos mais acostumados. 
+
+## Criando repositório remoto
+
+Após logado em sua plataforma de preferência procuramos a ferramenta de criação de repositório, daí para frente os passos são bastante simples:
+1. Você escolhe um nome para seu repositório
+2. Define se irá ou não utilizar um _template_ que irá trazer alguns arquivos e/ou estruturas de arquivos para o projeto
+3. Escolhe a privacidade dele
+4. Agora é só codar
+
+## Criando repositório local
+
+Para criação do repositório caminhamos no terminal até a pasta onde iremos trabalhar e utilizamos do comando `git init` para criarmos um repositório, ele ainda não estará alinhado com nenhum repositório remoto, para isso será necessário ligá-lo ao um já existente, este podendo ter sido criado via plataforma ou derivado de um projeto anterior em outra máquina ou diretório. Temos também a opção de criar o repositório utilizando o comando CURL, porém não trabalharemos com está suposição. Alguns editores de código realizam a criação do repositório caso ele não exista, um exemplo é o Visual Studio Code que ao utilizarmos a extensão do Git nos permite realizar a criação através da sua interface caso você esteja logado na conta de alguma plataforma. 
+
+Outra forma de criarmos um repositório local é realizando a clonagem de um repositório remoto, onde desta vez utilizamos o comando `git clone`. Assim além de criar o repositório local já o ligamos a um repositório remoto, nos permitindo trazer todos os arquivos e ramos já existentes no repositório. Alguns repositórios podem possuir uma definição de privacidade como privado, neste caso é necessário estar logado em uma plataforma com uma conta que possua acesso ao repositório remoto. 
+
+## Ligando o repositório local ou remoto
+
+Para ligarmos os repositórios podemos utilizar o comando `git remote add origin`. Neste caso devemos nos atentar ao mesmo problema citado na clonagem, pois devemos possuir acesso ao repositório em questão. 
+
+## Login no Git via terminal 
+
+Para entrarmos em uma conta alguns métodos são possíveis, o mais simples dele sendo via configuração global do Git em seu computador. Para esta, iremos precisar somente do nome de usuário e o e-mail da conta. Através dos comandos `git config --global user.name <seu_usuario>` e `git config --global user.email <seu_email>` já estaremos logados na conta. Algumas operações, porém, podem requerer sua senha antes de ser executada, para evitar isso podemos utilizar chaves SSH, que uma vez configuradas eliminam a necessidade da utilização de senhas uma vez que estás fazem a autenticação do usuário. Outra maneira de eliminar a necessidade da inserção da senha seria utilizando tokens de acesso, estes podem ser gerados nas plataformas e permitem a você a conexão sem a necessidade da informação de senhas. 
+
+# Vamos começar um repositório?
+
+Agora já sabemos todo o necessário para a criação de um projeto novo, para isto eu recomendo que você crie seu repositório remoto em sua plataforma de preferência e realize a configuração de usuário da maneira que achar mais cômoda. Em seguida seguiremos com os comandos: 
+```bash
+cd seu/diretorio
+touch README.md # Somente para usuários de sistema Unix
+echo > README.MD # Caso você esteja no Windows
+git init
+git remote add origin <link_para_seu_repositório>.git
+git add . # . faz com que adicionemos todos os arquivos do diretório atual
+git commit -m "First commit" # -m nos proporciona inserir uma mensagem para facilitar o entendimento do commit
+git push -u origin <branch_padrao> # Onde -u é uma abreviação para o comando --set-upstream, que define seu ramo atual como sendo derivado do ramo selecionado
+```
+Pronto, agora seu novo projeto está configurado.
+
+[[Voltar ao Topo]](#top)
