@@ -3,7 +3,7 @@ draft: false
 name: "Augusto"
 title: "Desenvolvedor"
 avatar: {
-    src: "https://images.unsplash.com/photo-1580489944761-15a19d654956?&fit=crop&w=280",
+    src: "https://avatars.githubusercontent.com/u/100322707?v=4",
     alt: "Augusto"
 }
 publishDate: "2022-11-07 15:39"
