@@ -34,13 +34,14 @@ publishedBlogEntries.sort(function (a, b) {
                   <Picture
                     src={blogPostEntry.data.image.src}
                     alt={blogPostEntry.data.image.alt}
-                    sizes="(max-width: 800px) 100vw, 800px"
-                    width={800}
-                    height={600}
+                    sizes="(max-width: 385px) 100vw, 385px"
+                    width={385}
+                    height={240}
                     loading={index <= 2 ? "eager" : "lazy"}
                     decoding={index <= 2 ? "sync" : "async"}
-                    class="w-full rounded-md object-cover object-center bg-white"
-                  />
+                    class="w-full rounded-md object-cover object-center bg-white flex items-center"
+                    style="height: 240px; max-width: 385px; width: auto; margin: 0 auto;"
+                    />
                   <div>
                     <span class="text-blue-400 uppercase tracking-wider text-sm font-medium">
                       {blogPostEntry.data.category}
