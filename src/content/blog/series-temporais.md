@@ -1,5 +1,5 @@
 ---
-draft: false
+draft: true
 title: "Introdução à Series Temporais"
 snippet: "Neste artigo, será apresentado uma breve introdução à análise de séries temporais e algumas aplicações."
 publishDate: "2024-10-13 08:00"
