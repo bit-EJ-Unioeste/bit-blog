@@ -1,0 +1,162 @@
+---
+draft: false
+title: "Introdução ao HTML"
+snippet: "Entenda como funciona o HTML (aula 01)"
+publishDate: "2024-11-19 20:00"
+image: {
+  src: "https://upload.wikimedia.org/wikipedia/commons/thumb/6/61/HTML5_logo_and_wordmark.svg/800px-HTML5_logo_and_wordmark.svg.png",
+  alt: "Logo do HTML"
+}
+category: "Tutoriais"
+author: "Matheus Pesarini"
+tags: [tutorial, linguagem-de-marcação, HTML, CSS]
+---
+
+## <a name=""></a>O que é o HTML e sua importância
+![Hello World!](https://earlystemer.com/wp-content/uploads/2021/09/html-structure-1024x588.png)
+
+HTML, ou HyperText Markup Language, é a linguagem de marcação padrão utilizada no mundo para criar páginas da WEB e aplicativos da WEB. É usada para estruturar e formatar o conteúdo de uma página WEB, incluindo textos, imagens e outros tipos de mídia.
+
+O HTML consiste de vários elementos, cada um tendo sua funcionalidade e aspecto de como representar aquilo na página WEB. Esses elementos são escritos usando tags, que são colocadas entre colchetes angulares e representam o início e o fim de um elemento HTML.
+
+### Estrutura Básica do HTML
+
+Todo programa em HTML segue uma estrutura padrão que pode ser dividida em `<html>`, `<head>` e `<body>`.
+
+Exemplo da estrutura básica do HTML
+
+```html
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style></style>
+</head>
+<body>
+    <h1>Introdução ao HTML</h1>
+    <script></script>
+</body>
+</html>
+```
+
+Agora vamos detalhar o que cada parte no código acima faz:
+
+1. `<!DOCTYPE html>`: Essa linha declara o tipo de documento como HTML5. Ele informa ao navegador para que se siga as especificações certas garantindo que a página seja interpretada corretamente.
+
+2. `<html lang="pt-BR">`: Essa linha `<html>` envolve todo o documento indicando o inicio e fim ao navegador, o atributo lang é importante para tecnologias assistivas. 
+
+3. `<head>`: O elemento `<head>` contém metadados sobre o documento, sendo informações que não serão exibidas mas são essenciais para o funcionamento, como a definição da codificação de caracteres como UTF-8, o tamanho viewport (área visível da página) para o tamanho da tela do dispositivo, a tag `<title>` usada para definir o nome da página e a tag `<style>` que pode ser usada para definir a aparência dos elementos da página.
+
+4. `<body>`: O elemento `<body>` contém todo o conteúdo visível da página, como textos, imagens, links, botões e etc. Tudo que é visto no navegador está dentro dessa seção. A tag `<h1>` é um cabeçalho usado para títulos principais, sendo o maior da hierarquia. A tag `<script>` permite adicionar JavaScript que é usado para tornar a página interativa.
+
+### Usando o HTML
+
+Por exemplo, o elemento `<p>` é usado para representar um parágrafo de texto e é escrito assim:
+
+```html
+<p>Exemplo de um parágrafo de texto.</p> 
+```
+
+Quase todo elemento tem uma tag de abertura e fechamento, sendo `<p>` abertura e `</p>` fechamento, tudo dentro das duas tags é o conteúdo do elemento.
+
+Além do texto, os elementos HTML também podem conter diversos atributos e elementos. Um atributo é uma informação adicional que pode ser adicionada a um elemento para fornecer contexto ou funcionalidade extra.
+
+Por exemplo, o elemento `<img>` é usado para incorporar uma imagem em um documento HTML. Ele tem um atributo chamado src, que significa "source" e é usado para especificar o local do arquivo de imagem.
+
+```html
+<img src="imagemLocal.jpg" alt="Descrição da imagem">
+```
+
+Neste exemplo, o atributo src especifica o local do arquivo de imagem, e o atributo alt fornece uma descrição da imagem para usuários que não conseguem visualizá-la indo para a questão de acessibilidade.
+
+
+O elemento id serve como identificador único enquanto o elemento class pode definir uma ou mais classes para algum elemento, ambos servem para estilizar com CSS ou referenciar o JavaScript para manipulação.
+
+```html
+<h1 id="titulo-principal">Introdução ao HTML</h1>
+<p class="texto-introducao">Este é um parágrafo de introdução.</p>
+```
+
+Podemos personalizar diretamente o elemento com a atribuição style, width e height sem a necessidade de fazer isso em um arquivo CSS.
+
+```html
+<div style="background-color: lightblue;">Bloco com fundo azul claro</div>
+<img src="imagem.jpg" alt="Descrição" width="300" height="200">
+```
+
+Atributos de Formulário são essenciais para mapear os elementos de um form, permitindo configurar como os dados são inseridos e processados, type define o tipo de campo de entrada, como texto, e-mail, número, senha, etc. Placeholder fornece um texto de preenchimento que aparece dentro do campo de entrada até o usuário começar a digitar. Required indica que o campo é obrigatório para enviar o formulário.
+
+```html
+<input type="email" placeholder="Digite seu e-mail">
+<input type="text" placeholder="Nome completo">
+<input type="password" required>
+```
+
+### Elementos importantes no HTML
+
+Existem muitos elementos diferentes que podem ser usados para adicionar conteúdo a um documento HTML. Alguns dos elementos mais comumente usados incluem:
+
+* `<p>`: Usado para criar um paragrafo.
+* `<h1>` - `<h6>`: Usado para criar títulos de tamanhos diferentes, com `<h1>` sendo o maior e `<h6>` sendo o menor.
+* `<div>`: Usado para agrupar elementos e aplicar estilos a eles.
+* `<ul>` e `<ol>`: Usado para criar listas não ordenadas (com marcadores) e ordenadas (numeradas), respectivamente.
+* `<li>`: Usado para criar um item de lista dentro de uma lista não ordenada ou ordenada.
+* `<img>`: Usado para inserir uma imagem na página da WEB.
+
+Aqui está um exemplo de como esses elementos podem ser usados para adicionar conteúdo a um documento HTML:
+
+```html
+<html>
+  <head>
+    <title>Minha página</title>
+  </head>
+  <body>
+    <h1>Bem vindo!</h1>
+    <p>Conteúdos da página.</p>
+    <div>
+      <h2>Sobre mim</h2>
+      <p>Sou um programador web.</p>
+    </div>
+    <div>
+      <h2>Habilidades</h2>
+      <ul>
+        <li>HTML</li>
+        <li>CSS</li>
+        <li>JavaScript</li>
+      </ul>
+    </div>
+    <div>
+      <h2>Experiência</h2>
+      <ol>
+        <li>Desenvolvedor de software na empresa X (2020-presente)</li>
+        <li>Integrante da BIT, empresa junior (2023-presente)</li>
+      </ol>
+    </div>
+    <div>
+      <img src="profile.jpg" alt="Foto de perfil">
+    </div>
+  </body>
+</html>
+```
+
+Neste exemplo, criamos uma página da web com quatro seções principais: Sobre mim, Habilidades, Experiência e uma foto de perfil. Cada seção é agrupada usando um elemento `<div>`, e usamos vários outros elementos, como títulos, parágrafos, listas e imagens, para adicionar conteúdo à página da web.
+
+### Como executar um HTML
+
+Para vizualizarmos um simples arquivo HTML, precisaremos localizar o arquivo na pasta em que foi salvo, e clicar nele que irá abrir por padrão no navegador.
+
+Para um projeto onde se deseja vizualizar o HTML em tempo real, enquanto se faz alterações, podemos utilizar a extensão "Live Server" no Visual Studio Code, ao instalar a extensão podemos selecionar o arquivo HTML e clicar em "Open With Live Server". O arquivo será aberto em uma nova janela do navegador, e qualquer alteração no HTML será automaticamente refletida na página.
+
+Para projetos mais complexos que irá utilizar banco de dados entre outras funcionalidades, precisaremos usar Node para rodar o servidor, porém como não é o foco dessa introdução, não será falado sobre.
+
+### Conclusão
+
+Para concluir, o HTML é a base essencial de qualquer página web, fornecendo a estrutura e a organização para o conteúdo. Sendo uma habilidade fundamental para criar websites, garantindo que o conteúdo seja exibido de maneira clara, acessível e otimizada para diferentes dispositivos e navegadores. Com o uso de CSS e outras tecnologias complementares, é possível transformar essa estrutura em uma experiência visual agradável e interativa para os usuários.
+
+A execução de arquivos HTML, como vimos, é simples e acessível a qualquer pessoa com um navegador. Seja visualizando diretamente, usando ferramentas de desenvolvimento ou configurando um servidor local, há várias maneiras de testar e melhorar suas páginas. Dominar o HTML abre portas para o desenvolvimento web e é o primeiro passo para entender o funcionamento da internet e a criação de conteúdo online.
+
+Importante salientar que não foi mostrado tudo que o HTML tem a oferecer nessa introdução, existem muitos mais elementos, atribuições e etc.
+
+[[Voltar ao Topo]](#top)
