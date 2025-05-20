@@ -1,7 +1,7 @@
 ---
 draft: false
-name: "Michel"
-title: "Secretário"
+name: "Michel Caesar"
+title: "Presidente"
 avatar: {
     src: "https://avatars.githubusercontent.com/u/79313637?v=4",
     alt: "Michel"

@@ -1,7 +1,7 @@
 ---
 draft: false
 name: "Fabio Crepaldi"
-title: "Desenvolvedor"
+title: "Tesoureiro"
 avatar: {
     src: "https://avatars.githubusercontent.com/u/50637180?v=4",
     alt: "Fabio"
